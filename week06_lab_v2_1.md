@@ -203,8 +203,12 @@ void main() {
 
 > ✅ **Checkpoint 2.1** รันไฟล์ทดสอบข้างต้น สังเกตค่าทั้ง 4 ฟิลด์ที่ `print()` ออกมาใน Debug Console ว่าตรงกับ Response Body จริงจาก Postman หรือไม่ ถ่ายภาพหน้าจอ Debug Console ที่แสดงว่าค่าทั้ง 4 ฟิลด์ถูกต้องตรงกับ JSON จริง
 
-```text
-บันทึกรูปที่นี่
+
+<img width="1857" height="950" alt="image" src="https://github.com/user-attachments/assets/fd20202a-e9b8-493d-aad5-79b762b7e6b6" />
+
+
+```
+ค่าที่พิมพ์ออกมาใน Terminal ประกอบด้วย cityName: Bangkok, temperature: 32.5, description: เมฆบางส่วน
 ```
 ### ขั้นตอนที่ 2.3 — 🧠 คิดเอง/ออกแบบเอง
 
