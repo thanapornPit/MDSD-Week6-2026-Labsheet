@@ -84,11 +84,13 @@ https://api.openweathermap.org/data/2.5/weather?q=Bangkok&appid=YOUR_API_KEY&uni
 
 **key ใน JSON**
 
+```
 1. name ใช้สำหรับแสดง ชื่อเมือง เช่น Bangkok
 2.main.temp  ใช้สำหรับแสดง อุณหภูมิปัจจุบัน
 3.main.feels_like ใช้สำหรับแสดง อุณหภูมิที่รู้สึกเหมือนจริง 
 4.weather[0].description  ใช้สำหรับแสดง คำอธิบายสภาพอากาศ
 
+```
 
 
 ### ขั้นตอนที่ 1.2 — 🧠 คิดเอง/ออกแบบเอง
