@@ -585,7 +585,7 @@ Future<Weather> fetchWeatherWithDio(String city) async {
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอ Debug Console ที่แสดงผลลัพธ์จริงจากการเรียก `fetchWeatherWithDio()` (ค่าทั้ง 4 ฟิลด์ของ `Weather` ที่ print ออกมา หรือแสดงผลบนหน้าจอถ้าเลือกแบบที่ 2)
 
-<img width="452" height="491" alt="image" src="https://github.com/user-attachments/assets/4c7d69ff-095f-4c7d-b278-efa3f46918b4" />
+<img width="1857" height="920" alt="image" src="https://github.com/user-attachments/assets/2f8661af-6590-46e9-a2c4-fc3d7054c8e6" />
 
 
 ### ขั้นตอนที่ 5.4 — 🧠 คิดเอง/ออกแบบเอง
@@ -608,14 +608,23 @@ Future<Weather> fetchWeatherWithDio(String city) async {
 
 > ✅ **Checkpoint 5.2** เปรียบเทียบสั้น ๆ ระหว่าง `http` กับ `dio` อย่างน้อย 3 ประเด็น โดยอ้างอิงจากสิ่งที่สังเกตได้จริงตอนทดลองในขั้นตอนที่ 5.3 เช่น การแปลง JSON อัตโนมัติ, การกำหนด Query Parameters, และรูปแบบการจัดการ Exception (`DioException` เทียบกับการดักจับหลายชนิดแยกกันแบบ `http`)
 
-```text
-บันทึกคำตอบที่นี่
 ```
->
+1.การแปลงข้อมูล JSON
+- http ต้องเขียนโค้ดแปลงข้อมูลดิบด้วยตัวเองทุกครั้ง (jsonDecode) ก่อนนำไปใช้งาน   
+- dio: แปลงข้อมูล JSON ให้เป็น Map หรือ List อัตโนมัติ พร้อมใช้งานทันทีผ่าน response.data
+ 2.การส่งค่าพารามิเตอร์ 
+- http ต้องต่อ URL เองแบบยาว ๆ เป็น String (เช่น ?q=city&appid=key) ซึ่งเสี่ยงต่อการพิมพ์ผิด   
+- dio แยกใส่เป็นก้อน queryParameters: {...} ต่างหาก ช่วยให้โค้ดเป็นระเบียบและจัดการตัวอักษรพิเศษให้อัตโนมัติ   
+3.การจัดการ Error และ Timeout
+- http  ต้องเขียนดักจับ Error หลายตัวแยกกันตามประเภท (เช่น TimeoutException, ClientException)   
+- dio  ใช้ตัวจัดการตัวเดียวคือ DioException แล้วแยกประเภทปัญหาด้วย e.type ทำให้โค้ดกระชับและจัดการง่ายขึ้น
+
+```
+
 > ✅ **Checkpoint 5.3** แสดงโค้ดเงื่อนไข `DioExceptionType` เพิ่มเติมที่เขียนเองในขั้นตอนที่ 5.4 
 
-```text
-บันทึกคำตอบที่นี่
+```
+
 ```
 ---
 
