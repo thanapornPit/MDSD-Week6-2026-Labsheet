@@ -622,8 +622,10 @@ Future<Weather> fetchWeatherWithDio(String city) async {
 ```
 
 > ✅ **Checkpoint 5.3** แสดงโค้ดเงื่อนไข `DioExceptionType` เพิ่มเติมที่เขียนเองในขั้นตอนที่ 5.4
-> 
-![Uploading image.png…]()
+
+
+<img width="1857" height="941" alt="image" src="https://github.com/user-attachments/assets/a8c8862e-fbbf-42e7-b0ef-9f5aedf56bea" />
+
 
 ---
 
