@@ -517,14 +517,19 @@ GET https://fakestoreapi.com/products
 
 ไม่ว่าจะเลือกแบบไหน เป้าหมายคือต้องเห็น **ผลลัพธ์จริงจาก Fake Store API** ปรากฏขึ้นมา  ถ้ารันแล้วเจอ error หรือโค้ดจาก Gemini ผิดพลาด (เช่น import ขาด, ชื่อ field ไม่ตรงกับ JSON จริง) ให้จดบันทึกข้อความ error และวิธีแก้ไขไว้ในด้านล่าง
 
-```text
-บันทึก error และการแก้ไขที่นี่
+```
+1.ข้อผิดพลาดที่พบ ตรงฟังก์ชัน 1 fetchAiProducts() ในไฟล์ weather_search_page.dart เนื่องจากยังไม่ได้สร้างไฟล์บริการ
+ai_product_service.dart และยังไม่ได้เพิ่มคำสั่ง import เชื่อมโยงไฟล์
+
+2.วิธีแก้ไข สร้างไฟล์ lib/services/ai_product_service.dart ขึ้นมาใหม่ พร้อมใส่โครงสร้างคลาส AiProduct
+และฟังก์ชันดึงข้อมูลให้ครบถ้วน และเพิ่มคำสั่ง import '../services/ai_product_service.dart'; ที่ด้านบนไฟล์หน้าจอให้ถูกต้อง 
 ```
 
 > ✅ **Checkpoint 4.2** ถ่ายภาพหน้าจอ Debug Console ที่แสดงผลลัพธ์จริงจากการเรียก `fetchAiProducts()` (เช่น รายการสินค้าที่ print ออกมา) 
-```text
-บันทึกรูปที่นี่
-```
+
+
+<img width="1831" height="962" alt="image" src="https://github.com/user-attachments/assets/0b1dfc06-d005-4b00-8b57-3b16d17430b9" />
+
 
 ---
 
